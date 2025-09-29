@@ -41,11 +41,10 @@ const projects: (Project & { techs: string[] })[] = [
 export default function Portfolio() {
   return (
     <main className="container mx-auto py-12 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-center">Meu Portfólio</h1>
-      <div className="grid md:grid-cols-2 gap-8 justify-center items-center">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         {projects.map((project, idx) => (
           project.title === "Express API Example" ? (
-            <div key={project.title} className="col-span-2 bg-white dark:bg-gray-900 rounded-xl shadow p-6 flex flex-col gap-4 h-full mx-auto max-w-xl">
+            <div key={project.title} className="bg-white dark:bg-gray-900 rounded-xl shadow p-6 flex flex-col justify-center gap-4 h-full min-w-0 w-full max-w-[480px] mx-auto col-span-1 md:col-span-2">
               <div className="w-full flex flex-col items-center justify-center mb-4">
                 <a href="https://github.com/Miguel-Bernardino" target="_blank" rel="noopener" title="Ver perfil no GitHub">
                   <img src="https://avatars.githubusercontent.com/u/142626169?v=4" alt="Avatar GitHub" className="w-20 h-20 rounded-full border-4 border-violet-500 shadow-lg hover:scale-105 transition-transform duration-200 mb-2" />
@@ -79,7 +78,7 @@ export default function Portfolio() {
               </div>
             </div>
           ) : (
-            <div key={project.title} className="bg-white dark:bg-gray-900 rounded-xl shadow p-6 flex flex-col gap-4 h-full">
+            <div key={project.title} className="bg-white dark:bg-gray-900 rounded-xl shadow p-6 flex flex-col gap-4 h-full w-full max-w-[480px] min-w-0 mx-auto">
               <iframe
                 src={project.url}
                 title={project.title}

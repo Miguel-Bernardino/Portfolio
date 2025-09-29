@@ -26,24 +26,45 @@ export default function HomeContent() {
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-violet-950 to-gray-900 text-white flex flex-col">
       {/* Navbar */}
 
-      <nav className="flex items-center justify-between py-6 sticky top-0 z-10 backdrop-blur-lg bg-gray-900/70 shadow-2xl border-b border-violet-700 px-8">
+  <nav className="flex items-center justify-between py-6 sticky top-0 z-50 backdrop-blur-lg bg-gray-900/70 shadow-2xl border-b border-violet-700 px-8">
         <div className="flex items-center gap-4">
           <a href="https://github.com/Miguel-Bernardino" target="_blank" rel="noopener" title="Ver perfil no GitHub">
             <img src="https://avatars.githubusercontent.com/u/142626169?v=4" alt="Avatar GitHub" className="w-12 h-12 rounded-full border-2 border-violet-500 shadow-lg hover:scale-105 transition-transform duration-200" />
           </a>
-          <span className="text-xl font-bold text-violet-300 drop-shadow">Miguel Bernardino</span>
+          <span className="hidden md:inline text-xl font-bold text-violet-300 drop-shadow">Miguel Bernardino</span>
         </div>
-        <div className="flex gap-8">
-          <button className="px-6 py-2 rounded-xl font-bold text-lg bg-gradient-to-r from-violet-700 to-violet-500 shadow-md hover:scale-105 hover:from-violet-600 hover:to-violet-400 transition-all duration-200 cursor-pointer" onClick={() => scrollToSection("sobre")}>Sobre</button>
-          <button className="px-6 py-2 rounded-xl font-bold text-lg bg-gradient-to-r from-violet-700 to-violet-500 shadow-md hover:scale-105 hover:from-violet-600 hover:to-violet-400 transition-all duration-200 cursor-pointer" onClick={() => scrollToSection("projetos")}>Projetos</button>
-          <button className="px-6 py-2 rounded-xl font-bold text-lg bg-gradient-to-r from-violet-700 to-violet-500 shadow-md hover:scale-105 hover:from-violet-600 hover:to-violet-400 transition-all duration-200 cursor-pointer" onClick={() => scrollToSection("social")}>Social</button>
+        <div className="flex gap-2 md:gap-8">
+          {/* Ícones para mobile, botões para md+ */}
+          <button className="block md:hidden p-2 rounded-full bg-violet-700 hover:bg-violet-500 text-white" onClick={() => scrollToSection("sobre")} title="Sobre">
+            {/* Ícone anterior de usuário */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A9.001 9.001 0 0112 15c2.21 0 4.21.805 5.879 2.146M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </button>
+          <button className="block md:hidden p-2 rounded-full bg-violet-700 hover:bg-violet-500 text-white" onClick={() => scrollToSection("projetos")} title="Projetos">
+            {/* Folder icon */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7a2 2 0 012-2h3.172a2 2 0 011.414.586l1.828 1.828A2 2 0 0012.828 8H19a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+            </svg>
+          </button>
+          <button className="block md:hidden p-2 rounded-full bg-violet-700 hover:bg-violet-500 text-white" onClick={() => scrollToSection("social")} title="Social">
+            {/* Ícone de globo/rede/social */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="10" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+            </svg>
+          </button>
+          {/* Botões normais para md+ */}
+          <button className="hidden md:block px-6 py-2 rounded-xl font-bold text-lg bg-gradient-to-r from-violet-700 to-violet-500 shadow-md hover:scale-105 hover:from-violet-600 hover:to-violet-400 transition-all duration-200 cursor-pointer" onClick={() => scrollToSection("sobre")}>Sobre</button>
+          <button className="hidden md:block px-6 py-2 rounded-xl font-bold text-lg bg-gradient-to-r from-violet-700 to-violet-500 shadow-md hover:scale-105 hover:from-violet-600 hover:to-violet-400 transition-all duration-200 cursor-pointer" onClick={() => scrollToSection("projetos")}>Projetos</button>
+          <button className="hidden md:block px-6 py-2 rounded-xl font-bold text-lg bg-gradient-to-r from-violet-700 to-violet-500 shadow-md hover:scale-105 hover:from-violet-600 hover:to-violet-400 transition-all duration-200 cursor-pointer" onClick={() => scrollToSection("social")}>Social</button>
         </div>
       </nav>
 
       {/* Conteúdo interno */}
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
 
-        <section id="sobre" className="w-full max-w-3xl bg-gradient-to-br from-gray-900 via-violet-950 to-gray-900 rounded-3xl shadow-2xl p-0 pb-10 mb-12 border border-violet-800 animate-fadein overflow-hidden">
+  <section id="sobre" className="w-full max-w-3xl bg-gradient-to-br from-gray-900 via-violet-950 to-gray-900 rounded-3xl shadow-2xl p-0 mb-12 md:pb-12 border border-violet-800 animate-fadein overflow-hidden">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-10">
                 <div className="flex flex-col items-center md:items-start md:w-1/3">
                 <div className="relative mb-4">
@@ -137,7 +158,7 @@ export default function HomeContent() {
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-violet-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">Ver perfil</span>
               </a>
               <div className="group flex flex-col items-center relative cursor-pointer" onClick={() => {navigator.clipboard.writeText('miguel.bernardino.5891@gmail.com')}}>
-                <div className="bg-gradient-to-br from-gray-800 via-violet-700 to-violet-400 rounded-full p-2 shadow-lg group-hover:scale-110 transition-transform duration-200 animate-pop-in" style={{ animationDelay: '0.1s' }}>
+                <div className="bg-gradient-to-br from-gray-800 via-violet-700 to-violet-400 rounded-full p-2 shadow-lg group-hover:scale-110 transition-transform duration-200 animate-pop-in" style={{ animationDelay: '0.1s', aspectRatio: '1 / 1' }}>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" className="w-12 h-12" />
                 </div>
                 <span className="text-violet-400 font-bold text-lg group-hover:underline mt-2">Email</span>
@@ -153,7 +174,13 @@ export default function HomeContent() {
             </div>
             <div className="flex flex-col gap-2 items-center mt-2">
               <p className="text-gray-300 text-center text-lg">Vamos conversar? Sinta-se à vontade para me chamar ou acompanhar meus projetos nas redes sociais!</p>
-              <span className="text-violet-300 text-base font-semibold bg-violet-900/40 px-4 py-2 rounded-full shadow mt-2 cursor-pointer hover:bg-violet-700/60 transition" onClick={() => {navigator.clipboard.writeText('miguel.bernardino.5891@gmail.com')}}>Email: miguel.bernardino.5891@gmail.com <span className="ml-2 text-xs text-violet-200">(Clique para copiar)</span></span>
+              <span
+                className="block mx-auto text-center text-violet-300 text-base sm:text-lg font-semibold bg-violet-900/40 px-6 py-4 rounded-full shadow-lg mt-6 cursor-pointer hover:bg-violet-700/60 transition whitespace-normal break-words max-w-xs sm:max-w-md"
+                onClick={() => {navigator.clipboard.writeText('miguel.bernardino.5891@gmail.com')}}
+              >
+                <span className="font-bold">Email:</span> <span className="break-all">miguel.bernardino.5891@gmail.com</span>
+                <span className="block text-xs text-violet-200 mt-1">(Clique para copiar)</span>
+              </span>
             </div>
           </div>
         </section>
