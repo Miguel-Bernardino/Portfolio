@@ -24,7 +24,7 @@ const projects: (Project & { techs: string[] })[] = [
   {
     title: "Calculadora de Idade",
     description: "Calculadora que permite descobrir a idade a partir da data de nascimento, com interface simples e responsiva.",
-    github: "https://github.com/miguel-bernardino/calculadora-idade",
+    github: "https://github.com/Miguel-Bernardino/calculadora-de-idade",
     url: "https://calculadora-idade.miguel-bernardino.me/",
     techs: ["React", "TypeScript", "TailwindCSS"]
   },
@@ -41,7 +41,23 @@ const projects: (Project & { techs: string[] })[] = [
 export default function Portfolio() {
   return (
     <main className="container mx-auto py-12 px-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+      {/* Ícone do Google para enviar email */}
+      <div className="flex justify-end mb-6">
+        <a
+          href="mailto:miguelbernardino.5891@gmail.com"
+          title="Enviar email para Miguel Bernardino"
+          target="_blank"
+          rel="noopener"
+          className="inline-block"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+            alt="Enviar Email Gmail"
+            className="w-10 h-10 hover:scale-110 transition-transform duration-200"
+          />
+        </a>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         {projects.map((project, idx) => (
           project.title === "Express API Example" ? (
             <div key={project.title} className="bg-white dark:bg-gray-900 rounded-xl shadow p-6 flex flex-col justify-center gap-4 h-full min-w-0 w-full max-w-[480px] mx-auto col-span-1 md:col-span-2">

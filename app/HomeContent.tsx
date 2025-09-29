@@ -157,13 +157,13 @@ export default function HomeContent() {
                 <span className="text-violet-400 font-bold text-lg group-hover:underline mt-2">GitHub</span>
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-violet-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">Ver perfil</span>
               </a>
-              <div className="group flex flex-col items-center relative cursor-pointer" onClick={() => {navigator.clipboard.writeText('miguel.bernardino.5891@gmail.com')}}>
+              <a href="mailto:miguel.bernardino.5891@gmail.com?subject=Contato via Portfólio" className="group flex flex-col items-center relative">
                 <div className="bg-gradient-to-br from-gray-800 via-violet-700 to-violet-400 rounded-full p-2 shadow-lg group-hover:scale-110 transition-transform duration-200 animate-pop-in" style={{ animationDelay: '0.1s', aspectRatio: '1 / 1' }}>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" className="w-12 h-12" />
                 </div>
                 <span className="text-violet-400 font-bold text-lg group-hover:underline mt-2">Email</span>
-                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-violet-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">Copiar email</span>
-              </div>
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-violet-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">Enviar email</span>
+              </a>
               <a href="https://www.linkedin.com/in/miguel-borges-52a8962a2/" target="_blank" rel="noopener" className="group flex flex-col items-center relative">
                 <div className="bg-gradient-to-br from-gray-800 via-violet-700 to-violet-400 rounded-full p-2 shadow-lg group-hover:scale-110 transition-transform duration-200 animate-pop-in" style={{ animationDelay: '0.2s' }}>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" className="w-12 h-12" />
