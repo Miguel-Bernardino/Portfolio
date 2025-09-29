@@ -41,22 +41,6 @@ const projects: (Project & { techs: string[] })[] = [
 export default function Portfolio() {
   return (
     <main className="container mx-auto py-12 px-4">
-      {/* Ícone do Google para enviar email */}
-      <div className="flex justify-end mb-6">
-        <a
-          href="mailto:miguelbernardino.5891@gmail.com"
-          title="Enviar email para Miguel Bernardino"
-          target="_blank"
-          rel="noopener"
-          className="inline-block"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
-            alt="Enviar Email Gmail"
-            className="w-10 h-10 hover:scale-110 transition-transform duration-200"
-          />
-        </a>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         {projects.map((project, idx) => (
           project.title === "Express API Example" ? (
